@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using BRG.Data;
 
 namespace brg
 {
@@ -33,6 +35,9 @@ namespace brg
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<BRGContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("BRGContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
