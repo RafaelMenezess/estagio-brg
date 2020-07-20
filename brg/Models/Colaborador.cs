@@ -1,7 +1,6 @@
 ﻿using System;
+using brg.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BRG.Models
 {
@@ -11,5 +10,19 @@ namespace BRG.Models
         public string Cargo { get; set; }
         public string Departamento { get; set; }
         public string Name { get; set; }
+        public ICollection<Trilha> Trilhas { get; set; } = new List<Trilha>();
+
+        public Colaborador()
+        {
+
+        }
+
+        public Colaborador(int id, string cargo, string departamento, string name)
+        {
+            Id = id;
+            Cargo = cargo;
+            Departamento = departamento;
+            Name = name;
+        }
     }
 }
