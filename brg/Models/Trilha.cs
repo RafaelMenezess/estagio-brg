@@ -11,7 +11,8 @@ namespace brg.Models
         public DateTime Prazo { get; set; }
         public Colaborador Colaborador { get; set; }
         public Habilidade Habilidade { get; set; }
-
+        public int ColaboradorId { get; set; }
+        public int HabilidadeId { get; set; }
 
         public Trilha()
         {

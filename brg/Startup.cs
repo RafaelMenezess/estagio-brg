@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using BRG.Models;
 using brg.Models;
+using brg.Data;
+using brg.Services;
 
 namespace brg
 {
@@ -40,6 +42,10 @@ namespace brg
             services.AddDbContext<BRGContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("BRGContext"), builder => 
                         builder.MigrationsAssembly("brg")));
+
+            services.AddScoped<SeedingService>();
+            services.AddScoped<ColaboradorService>();
+            services.AddScoped<HabilidadeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

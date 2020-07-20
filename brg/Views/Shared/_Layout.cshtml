@@ -26,13 +26,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">brg</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">BRG</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Colaboradores" asp-action="Index">Colaborador</a></li>
+                    <li><a asp-area="" asp-controller="Habilidades" asp-action="Index">Habilidade</a></li>
+                    <li><a asp-area="" asp-controller="Trilhas" asp-action="Index">Trilha</a></li>
                 </ul>
             </div>
         </div>
@@ -44,7 +45,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2020 - brg</p>
+            <p>&copy; 2020 - BRG</p>
         </footer>
     </div>
 
